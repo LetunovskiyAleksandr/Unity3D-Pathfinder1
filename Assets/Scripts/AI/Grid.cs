@@ -127,7 +127,7 @@ public class Grid : MonoBehaviour
             {
                 var h = Heuristic(finishNode, current); //(goal - curCell.position).magnitude;
                 var g = grid[current.x, current.y].Distance + PathNode.Dist(grid[node.x, node.y], grid[current.x, current.y]);//bestCell.cost + (curCell.position - bestCell.position).magnitude;
-                if (grid[node.x, node.y].walkable && grid[node.x, node.y].Distance < (h + g))
+                if (grid[node.x, node.y].walkable && grid[node.x, node.y].Distance > (h + g))
 
                 /// grid[node.x, node.y].Distance > grid[current.x, current.y].Distance + PathNode.Dist(grid[node.x, node.y], grid[current.x, current.y]))
                 {
